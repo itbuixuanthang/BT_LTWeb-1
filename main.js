@@ -1,3 +1,4 @@
+
 const posts = document.querySelectorAll('.post');
 
 const postContentContainer = document.getElementById('showPost');
