@@ -1,12 +1,22 @@
-var button = document.querySelector('h1');
-var isRed = false;
+const posts = document.querySelectorAll('.post');
 
-function changeColor() {
-    if (isRed) {
-        button.classList.remove('red-color');
-        isRed = false;
-    } else {
-        button.classList.add('red-color');
-        isRed = true;
-    }
-}
+const postContentContainer = document.getElementById('showPost');
+
+posts.forEach(post => {
+    post.addEventListener('click', () => {
+        posts.forEach(p => {
+            if (p !== post) {
+                p.style.display = 'none';
+            }
+        });
+
+        postContentContainer.innerHTML = '';
+
+        const content = post.innerHTML;
+
+        const contentElement = document.createElement('div');
+        contentElement.innerHTML = content;
+
+        postContentContainer.appendChild(contentElement);
+    });
+});
