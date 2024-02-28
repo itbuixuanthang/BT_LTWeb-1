@@ -28,6 +28,10 @@
     font-size: 18px;
 }
 
+.text-align-justify {
+    text-align: justify;
+}
+
 /* ===================================================== */
 .container {
     width: 100%;
@@ -129,6 +133,23 @@
     width: 100%;
 }
 
+p {
+    padding: 10px 0;
+}
+
+/* ============================================================= */
+/* Details.html */
+.post .detail-img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.detail-post {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
 
 @media (max-width: 700px) {
     .info {
